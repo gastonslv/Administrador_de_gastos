@@ -4,10 +4,10 @@ def menu_principal():
     por el usuario.
     """
 
-    bucle = True
+    salir = False
     decision_usuario = 0
 
-    while bucle:
+    while salir == False:
         try:
             print("\nMenu de opciones: \n\n" +
                   "\t1.Gastos\n" +
@@ -26,7 +26,7 @@ def menu_principal():
                 print("Debe seleccionar una opcion entre 1 y 4, vuelva a intentarlo")
                 print("---------------------\n")
             else:
-                bucle = False
+                salir = True
 
     return decision_usuario
             
