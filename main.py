@@ -12,11 +12,8 @@ d_usuario_menu = 0 # futura decision del usuario
 ## Cargamos
 
 gastos = []
-
 ingresos = []
-
 ahorros = []
-
 fondos = []
 
 print("Bienvenido al gestor de gastos!")
