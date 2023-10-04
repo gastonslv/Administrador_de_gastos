@@ -1,4 +1,8 @@
 def calcular_gastos(fondos, gastos, movimientos):
+    """
+    Le pide al usuario que ingrese su gasto. La funcion se encarga de descontar
+    del fondo dicho gasto y registrar la operacion en gastos y movimientos
+    """
     salir = False
     gasto = {}
     descripcion = '-'
