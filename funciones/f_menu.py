@@ -1,4 +1,4 @@
-def menu_principal():
+def menu_principal(fondos, ahorros):
     """"
     Despliega un menu de opciones, y retorna la opcion seleccionada
     por el usuario.
@@ -9,11 +9,15 @@ def menu_principal():
 
     while salir == False:
         try:
-            print("\nMenu de opciones: \n\n" +
+            print("Fondos: " + str(fondos) + "\n" +
+                  "Ahorros: " + str(ahorros) + "\n" +
+                  "----------------------------\n" +
+                  "Menu de opciones: \n\n" +
                   "\t1.Gastos\n" +
                   "\t2.Ingresos\n" +
-                  "\t3.Ahorros\n" +
-                  "\t4.Consultar fondos\n")
+                  "\t3.Ahorrar\n" +
+                  "\t4.Movimientos\n" +
+                  "\t5.Salir\n")
             decision_usuario = int(input("Seleccione una opcion: "))
         except ValueError:
             print("\n--------Error--------")
@@ -21,9 +25,9 @@ def menu_principal():
             print("---------------------\n")
             continue
         else:
-            if (decision_usuario < 1) or (decision_usuario > 4):
+            if (decision_usuario < 1) or (decision_usuario > 5):
                 print("\n--------Error--------")
-                print("Debe seleccionar una opcion entre 1 y 4, vuelva a intentarlo")
+                print("Debe seleccionar una opcion entre 1 y 5, vuelva a intentarlo")
                 print("---------------------\n")
             else:
                 salir = True

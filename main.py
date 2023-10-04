@@ -5,20 +5,28 @@ import json
 from funciones.f_menu import menu_principal as menu
 from funciones.f_cargar_datos import * #json cargar_datos guardar_datos
 
-## Variables
-salir_programa = False
-d_usuario_menu = 0 # futura decision del usuario
+## caja 1
+fondos = []
 
-## Cargamos
+## caja 2
+ahorros = []
 
+## registro de operaciones
 gastos = []
 ingresos = []
-ahorros = []
-fondos = []
+movimientos = []
+
+## Variables
+salir_programa = False
+usuario = 0 # decision del usuario
 
 print("Bienvenido al gestor de gastos!")
 
 while salir_programa == False:
-    d_usuario_menu = menu()
+    usuario = menu(fondos, ahorros)
     
+    if usuario >= 4:
+        calcular(usuario, fondos, ahorros, gastos, ingresos, movimientos)
+    else:
+        salir_programa = True
 
