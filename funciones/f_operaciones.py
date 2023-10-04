@@ -52,7 +52,7 @@ def calcular_ingresos(fondos, ingresos, movimientos):
 
     while salir == False:
         try:
-            monto_ingreso = float(input("Ingrese el monto del ingreso: "))
+            monto_ingreso = float(input("Ingrese el monto: "))
             fondos[0] += monto_ingreso # agregamos los ingresos al fondo
             descripcion = input("Descripcion del ingreso: ")
             fecha = input("Fecha [01/01/01]: ")
@@ -76,4 +76,5 @@ def calcular_ingresos(fondos, ingresos, movimientos):
             print("---------------------\n")
             continue
 
-        
+def calcular_ahorro(fondos, ahorros, movimientos):
+    
