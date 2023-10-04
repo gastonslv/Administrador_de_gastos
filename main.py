@@ -1,16 +1,14 @@
 """"
 Gestor de gastos
 """
-import json
 from funciones.f_menu import menu_principal as menu
 from funciones.f_calcular import calcular
-from funciones.f_cargar_datos import * #json cargar_datos guardar_datos
 
 ## caja 1
-fondos = []
+fondos = [0]
 
 ## caja 2
-ahorros = []
+ahorros = [0]
 
 ## registro de operaciones
 gastos = []
@@ -25,8 +23,7 @@ print("Bienvenido al gestor de gastos!")
 
 while salir_programa == False:
     usuario = menu(fondos, ahorros)
-    
-    if usuario >= 4:
+    if usuario < 5:
         calcular(usuario, fondos, ahorros, gastos, ingresos, movimientos)
     else:
         salir_programa = True
