@@ -27,4 +27,3 @@ while salir_programa == False:
         calcular(usuario, fondos, ahorros, gastos, ingresos, movimientos)
     else:
         salir_programa = True
-
