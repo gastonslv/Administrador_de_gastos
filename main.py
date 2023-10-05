@@ -5,20 +5,15 @@ from funciones.f_menu import menu_principal as menu
 from funciones.f_calcular import calcular
 from funciones.f_manipulacion_datos import cargar_datos, guardar_datos
 ## caja 1
-fondos = [0]
-cargar_datos("data\\fondos.json", fondos)
+fondos = cargar_datos("data\\fondos.json")
 
 ## caja 2
-ahorros = [0]
-cargar_datos("data\\ahorros.json", ahorros)
+ahorros = cargar_datos("data\\ahorros.json")
 
 ## registro de operaciones
-gastos = []
-cargar_datos("data\\gastos.json", gastos)
-ingresos = []
-cargar_datos("data\\ingresos.json", ingresos)
-movimientos = []
-cargar_datos("data\\movimientos.json", movimientos)
+gastos = cargar_datos("data\\gastos.json")
+ingresos = cargar_datos("data\\ingresos.json")
+movimientos = cargar_datos("data\\movimientos.json")
 
 ## Variables
 salir_programa = False
