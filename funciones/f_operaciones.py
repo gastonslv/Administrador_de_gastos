@@ -77,4 +77,39 @@ def calcular_ingresos(fondos, ingresos, movimientos):
             continue
 
 def calcular_ahorro(fondos, ahorros, movimientos):
-    
+    """
+    Mueve dinero desde los fondos a los ahorros, y registra la operacion
+    en movimientos.
+    """
+    salir = False 
+    mover_fondos = 0
+    ahorro = {}
+    descripcion = ''
+    fecha = ''
+
+    while salir == False:
+        try:
+            mover_fondos = float(input("Ingrese la cantidad de dinero que quiero ahorrar: "))
+            if mover_fondos > fondos[0]:
+                print("No hay fondos suficientes para realizar la operacion!")
+                print("Vuelva a intentarlo...\n")
+                continue
+            else:
+                fondos[0] -= mover_fondos
+                ahorros[0] += mover_fondos
+                descripcion = input("Breve descripcion: ")
+                fecha = input("Fecha: ")
+                ahorro = {
+                    'tipo': 'ahorro',
+                    'monto': mover_fondos,
+                    'resumen': descripcion,
+                    'fecha': fecha,
+                }
+                movimientos.append(ahorro)
+                salir = True
+        except ValueError:
+            print("\n--------Error--------")
+            print("El valor que ingreso es incorrecto, vuelava a intentarlo")
+            print("---------------------\n")
+            continue
+    return 0
