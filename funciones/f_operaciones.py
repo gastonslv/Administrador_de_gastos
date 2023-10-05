@@ -120,11 +120,11 @@ def mostrar_movimientos(movimientos):
     """
     Mustra la lista que se le pase como argumento
     """
-    print("MOVIMIENTOS")
+    print("\nMOVIMIENTOS\n")
     for diccionario in movimientos:
         print("-----------------")
-        for key, value in diccionario:
+        for key, value in diccionario.items():
             if key == 'tipo':
-                print(value.upper)
+                print(value.upper())
             else:
                 print("- " + key + ": " + str(value))
