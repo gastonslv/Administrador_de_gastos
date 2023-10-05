@@ -76,6 +76,7 @@ def calcular_ingresos(fondos, ingresos, movimientos):
             print("---------------------\n")
             continue
 
+
 def calcular_ahorro(fondos, ahorros, movimientos):
     """
     Mueve dinero desde los fondos a los ahorros, y registra la operacion
@@ -113,3 +114,17 @@ def calcular_ahorro(fondos, ahorros, movimientos):
             print("---------------------\n")
             continue
     return 0
+
+
+def mostrar_movimientos(movimientos):
+    """
+    Mustra la lista que se le pase como argumento
+    """
+    print("MOVIMIENTOS")
+    for diccionario in movimientos:
+        print("-----------------")
+        for key, value in diccionario:
+            if key == 'tipo':
+                print(value.upper)
+            else:
+                print("- " + key + ": " + str(value))
