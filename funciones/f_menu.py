@@ -9,9 +9,9 @@ def menu_principal(fondos, ahorros):
 
     while salir == False:
         try:
-            print("Fondos:  $" + str(fondos[0]) + "\n" +
-                  "Ahorros: $" + str(ahorros[0]) + "\n" +
-                  "----------------------------\n" +
+            print("//////////////////////")
+            print("\nFondos:  $" + str(fondos[0]) + "\n" +
+                  "Ahorros: $" + str(ahorros[0]) + "\n\n" +
                   "Menu de opciones: \n\n" +
                   "\t1.Gastos\n" +
                   "\t2.Ingresos\n" +

@@ -12,6 +12,6 @@ def calcular(operacion, fondos, ahorros, gastos, ingresos, movimientos):
         c_ahorro(fondos, ahorros, movimientos)
     elif operacion == 4:
         mostrar_movimientos(movimientos)
-    return 0
+    return 0 
 
 
